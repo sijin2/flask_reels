@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>너의 다음은?</title>
+
+    <style>
+        .image {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    
+        .Top4 {
+            transition: color 0.3s ease-in-out;
+            text-align: center;
+            color: white;
+            font-size: 60px;
+            font-family: Apple SD Gothic Neo;
+            font-weight: 700;
+            line-height: 80px;
+            word-wrap: break-word;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    
+        #posts1:hover .Top4 {
+            color: transparent;
+        }
+    
+        #posts1:hover .image {
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const top4 = document.querySelector(".Top4");
+            const image = top4.querySelector(".image");
+    
+            top4.addEventListener("mouseenter", function() {
+                top4.style.color = "transparent"; // 글자 숨김
+                image.style.opacity = 1; // 이미지 보이게
+            });
+    
+            top4.addEventListener("mouseleave", function() {
+                top4.style.color = "white"; // 글자 다시 표시
+                image.style.opacity = 0; // 이미지 숨김
+            });
+        });
+    </script>
+    
+    
+
+</head>
+
+<body>
+    <div class="Cover" style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: black">
+        <div class="Line1" style="width: 1177px; height: 0px; left: 210px; top: -50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; opacity: 0.50; border: 0.50px #6666FF dotted"></div>
+        <div class="Line2" style="width: 1177px; height: 0px; left: 464px; top: -50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; opacity: 0.50; border: 0.50px #6666FF dotted"></div>
+        <div class="Line3" style="width: 1177px; height: 0px; left: 717px; top: -50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; opacity: 0.50; border: 0.50px #6666FF dotted"></div>
+        <div class="Line6" style="width: 205px; height: 0px; left: 717px; top: -85px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 2.50px #6666FF solid"></div>
+        <div class="Line7" style="width: 205px; height: 0px; left: 464px; top: 1062px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 2.50px #6666FF solid"></div>
+        <div class="Line8" style="width: 205px; height: 0px; left: 210px; top: 130px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 2.50px #6666FF solid"></div>
+        <div class="Line4" style="width: 1177px; height: 0px; left: 958px; top: -50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; opacity: 0.50; border: 0.50px #6666FF dotted"></div>
+        <div class="Line5" style="width: 1177px; height: 0px; left: 1199px; top: -50px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; opacity: 0.50; border: 0.50px #6666FF dotted"></div>
+        
+
+
+
+
+        <div class="Group1" style="width: 1344.99px; height: 960px; left: 958px; position: absolute; overflow: hidden; transform-origin: 0 0;">
+
+            <div class = "popu" style="margin-top : 20px; margin-left: 100px; margin-right: 100px; position: absolute; background: #6666FF; justify-content: center; align-items: center; gap: 10px; display: flex; 
+            color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center;">
+                현재 유행 중인 Instagram Reels
+            </div>
+
+            <div id="posts" style="margin-top: 140px; margin-left: 100px; width : 783px; height : 140px;background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+                <div class="Top1" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center; margin: 0 auto;">
+                    Top1.<br>
+                    <a href="https://www.instagram.com/explore/tags/{{posts[0]}}" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center;">#{{posts[0]}}</a>
+                </div>
+            </div>
+
+            <div id="posts" style="margin-top: 50px; margin-left: 100px; width : 783px; height : 140px; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+                <div class="Top1" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center; margin: 0 auto;">
+                    Top2.<br>
+                    <a href="https://www.instagram.com/explore/tags/{{posts[1]}}" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center;">#{{posts[1]}}</a>
+                </div>
+            </div>
+
+            <div id="posts" style="margin-top: 50px; margin-left: 100px; width : 783px; height : 140px; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+                <div class="Top1" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center; margin: 0 auto;">
+                    Top3.<br>
+                    <a href="https://www.instagram.com/explore/tags/{{posts[2]}}" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word; text-align: center;">#{{posts[2]}}</a>
+                </div>
+            </div>
+
+
+            <div id="posts1" style="margin-top: 50px; margin-left: 100px; width: 783px; height: 140px; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; display: flex; align-items: center; position: relative;">
+                <div class="image" style="text-align: center; position: absolute; top: -50px; left: 0; right: 0; bottom: 0;">
+                    <img src="../static/images/Unknown.png" alt="Image" class="image" style="max-height: 100%; max-width: 100%;">
+                </div>
+                <div class="Top4">
+                    그래프 보기
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="CookieBanners" style="left: 235px; top: 278px; position: absolute; color: white; font-size: 108px; font-family: Apple SD Gothic Neo; font-weight: 700; word-wrap: break-word">너의 다음은?</div>
+        <div class="Frame161" style="padding-left: 20px; padding-right: 20px; left: 235px; top: 458px; position: absolute; background: #6666FF; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+          <div class="Designs" style="color: white; font-size: 60px; font-family: Apple SD Gothic Neo; font-weight: 700; line-height: 80px; word-wrap: break-word">유행을 읽어주는 사이트</div>
+        </div>
+        <div class="Frame160" style="left: 235px; top: 649px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+          <div class="Frame158" style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+            <div class="AutoLayout" style="color: #D4D4F3; font-size: 48px; font-family: Apple SD Gothic Neo; font-weight: 600; line-height: 52px; word-wrap: break-word">세종대</div>
+          </div>
+          <div class="Frame160" style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+            <div class="Variant" style="color: #D4D4F3; font-size: 48px; font-family: Apple SD Gothic Neo; font-weight: 600; line-height: 52px; word-wrap: break-word">인하대</div>
+          </div>
+        </div>
+        <div class="Frame161" style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 235px; top: 741px; position: absolute; background: rgba(102, 102, 255, 0.20); border-radius: 8px; border: 0.50px #6666FF solid; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
+          <div class="InteractiveComponents" style="color: #D4D4F3; font-size: 48px; font-family: Apple SD Gothic Neo; font-weight: 600; line-height: 52px; word-wrap: break-word">김시진 김동혁 주민건 김연준</div>
+        </div>
+        <div class="Frame71" style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 235px; top: 130px; position: absolute; background: #6666FF; border-radius: 8px; border: 0.50px black solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+          <div class="V15" style="color: white; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">Update.230809</div>
+        </div>
+        </div>
+      </div>
+<!--
+        <div class="container">
+    
+            <h5> 
+                현재 유행 중인 Instagram 해쉬태그
+            </h5> <br>
+    
+    
+            <ul id="posts">
+                {% for item in posts %}
+                <li><a href="https://www.instagram.com/explore/tags/{{item}}">#{{item}}</a></li>
+                {% endfor %}
+           <ul>
+    
+    
+    
+        </div>
+-->
+        
+    </div>
+
+        <footer class="bg-dark text-center text-lg-start">
+        </footer>
+    <!-- footer -->
+
+    <!-- End your project here-->
+
+</body>
+
+
+
+</html>
